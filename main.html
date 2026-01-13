@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For You ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+            font-family: 'Georgia', serif;
+            overflow-y: auto;
+        }
+        
+        .heart {
+            position: fixed;
+            color: #ff6f9f;
+            animation: floatUp 6s infinite;
+            font-size: 1.2rem;
+            opacity: 0.6;
+            z-index: 0;
+        }
+        
+        @keyframes floatUp {
+            from {
+                transform: translateY(100vh);
+            }
+            to {
+                transform: translateY(-10vh);
+            }
+        }
+        
+        .page {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 1s ease;
+            overflow-y: auto;
+            padding: 40px 0;
+            z-index: 1;
+        }
+        
+        .page.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .paper {
+            background: #fffaf3;
+            width: 360px;
+            max-width: 92vw;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0) rotate(-1deg);
+            }
+            50% {
+                transform: translateY(-6px) rotate(1deg);
+            }
+        }
+        
+        .paper::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient( to bottom, transparent, transparent 24px, rgba(0, 0, 0, 0.04) 25px);
+            pointer-events: none;
+        }
+        
+        h1 {
+            font-size: 1.4rem;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        
+        img.inline {
+            width: 100px;
+            border-radius: 6px;
+            margin: 6px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .photos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .photos img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        button {
+            display: block;
+            margin: 15px auto 0;
+            background: #ff8fb1;
+            border: none;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        
+        button:hover {
+            transform: scale(1.05);
+            background: #ff6f9f;
+        }
+        
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 20px;
+        }
+        
+        video {
+            display: block;
+            margin: 10px auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        // Redirect to login if coming directly
+        if (document.referrer.indexOf("index.html") === -1) {
+            window.location.href = "index.html";
+        }
+    </script>
+
+
+
+    <!-- Floating hearts -->
+    <div class="heart" style="left:10%; animation-delay:0s">❤️</div>
+    <div class="heart" style="left:50%; animation-delay:2s">💖</div>
+    <div class="heart" style="left:80%; animation-delay:4s">💕</div>
+
+
+
+    <!-- LANDING PAGE -->
+    <div class="page active" id="page1">
+        <div class="paper">
+            <h1>WEBSITE CONTAINING MY LOVE 💖</h1>
+            <p>Choose what you want to see, bebbiiii 💕</p>
+
+            <button onclick="goToPage(2)">Letter 💌</button>
+            <button onclick="goToPage(3)">Pictures 📸</button>
+            <button onclick="goToPage(4)">Video 🎥</button>
+            <button onclick="goToPage(5)">Edits 🎥</button>
+            <button onclick="goToPage(6)">Secret 🎥</button>
+        </div>
+    </div>
+
+    <!-- PAGE 2 : LETTER -->
+    <div class="page" id="page2">
+        <div class="paper">
+            <h1>My Bebbiiii,</h1>
+
+            <p>
+
+                <br><br> Hi!!! ako diay ni imong uyabbb!! HAHHAHA 💕 Kahinumdom paka ani na picture? Mao ni atong first meet 😭 HAPPY KAAYO KO ANI KAYY CUTE KAAYO KAA SAYANG LANG KAY WALA TA NAGKA TAPAD PERO HAPPY KO KAY NAGKITA TAAA!!
+
+            </p>
+
+            <p>
+                Gihimo ni nako ni para naa kay tan-awon everytime mingawon ka nako 💖
+            </p>
+
+
+
+            <p>Love kaayo tika bebiiii ❤️ Happy 1 year and 3 months</p>
+
+            <p>
+                Bebbiiiiii, First of alll thank kaayo sa tanannn. Thank you kay ni stay ka sa akoa even tho medjo layo layo ta sa usa't usa, wala jud nag bag-o imong chinattan nako, wala ka nag bag-o jdddd. You Stayed consistent sa akoa and im very THANKFULLLLL!!!!
+            </p>
+            <p>
+                I hope na kung mabasa nani nimooo, ma sud sa huna2 nimo na LOVEEE NAA LOVEEE ka nakoooo!!! IKAW AKONG PINAKA LOVE SA TANANNN
+            </p>
+            <p>
+                Thank you for being you, and for loving me bebbiiiii.
+
+
+                <div class="signature">Your Bebi, Francis ❤️</div>
+
+                <button onclick="goToPage(1)">Back 🏠</button>
+        </div>
+    </div>
+
+    <!-- PAGE 3 : PICTURES -->
+    <div class="page" id="page3">
+        <div class="paper">
+            <h1>Us 📸</h1>
+            <p>Pics nato bebiiii, I miss you 🥺</p>
+
+            <div class="photos">
+                <img src="3.jpg" class="inline" />
+                <img src="2.jpg" class="inline" />
+                <img src="4.jpg" />
+                <img src="5.jpg" />
+                <img src="1.jpg">
+                <img src="6.jpg">
+                <img src="7.jpg">
+                <img src="8.jpg">
+                <img src="9.jpg">
+                <img src="11.jpg">
+                <img src="12.jpg">
+                <img src="13.jpg">
+
+            </div>
+
+            <button onclick="goToPage(1)">Back 🏠</button>
+        </div>
+    </div>
+
+    <!-- PAGE 4 : VIDEO -->
+    <div class="page" id="page4">
+        <div class="paper">
+            <h1>To the one I cherish the most 💖</h1>
+
+
+            <video src="lovelove.mp4" width="320" controls> </video>
+
+            <video src="cream1.mp4" width="320" controls> </video>
+            <video src="cream2.mp4" width="320" controls> </video>
+
+
+
+            <div class="signature">Pransis ❤️</div>
+
+
+
+
+
+            <button onclick="goToPage(1)">Back 🏠</button>
+        </div>
+    </div>
+
+
+    <div class="page" id="page5">
+        <div class="paper">
+
+            <video src="love.mp4" width="320" controls> </video>
+            <P>FIRST ICE CREAM DATE NATOOO!!! 2ND ANOE HAHHAHAHHAHAHA</P>
+
+
+            <button onclick="goToPage(1)">Back 🏠</button>
+        </div>
+
+    </div>
+
+    <div class="page" id="page6">
+        <div class="paper">
+
+            <video src="secret6.mp4" width="200" controls> </video>
+            <div class="photos">
+                <img src="secret1.jpg">
+                <img src="secret2.jpg">
+                <img src="secret3.jpg">
+                <img src="secret4.jpg">
+                <img src="secret5.jpg">
+
+            </div>
+
+
+            <button onclick="goToPage(1)">Back 🏠</button>
+        </div>
+
+    </div>
+
+
+    <script src="auth.js"></script>
+
+    <script>
+        function login() {
+            const input = document.getElementById("password").value;
+            const error = document.getElementById("error");
+
+            if (checkPassword(input)) {
+                document.getElementById("loginPage").classList.remove("active");
+                document.getElementById("page1").classList.add("active");
+                error.textContent = "";
+                localStorage.setItem("loggedIn", "yes");
+            } else {
+                error.textContent = "Wrong password 🥺";
+            }
+        }
+
+
+        function goToPage(page) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(`page${page}`).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

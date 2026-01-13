@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For You ❤️</title>
+    <title>Login 💖</title>
 
     <style>
         body {
@@ -147,183 +147,33 @@
     </style>
 </head>
 
-<body>
-
-    <!-- Floating hearts -->
-    <div class="heart" style="left:10%; animation-delay:0s">❤️</div>
-    <div class="heart" style="left:50%; animation-delay:2s">💖</div>
-    <div class="heart" style="left:80%; animation-delay:4s">💕</div>
 
 
-    <div class="page active" id="loginPage">
-        <div class="paper">
-            <h1>Enter Password 💖</h1>
+<body style="background:#ffd6e8;font-family:Georgia;display:flex;justify-content:center;align-items:center;height:100vh;">
 
-            <input id="password" type="password" placeholder="Secret password..." style="width:100%;padding:8px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;">
+    <div style="background:white;padding:30px;border-radius:10px;width:300px;text-align:center;" class="paper">
+        <h1>Enter Password 💖</h1>
 
-            <button onclick="login()">Enter ❤️</button>
+        <input id="password" type="password" placeholder="Secret password..." style="width:100%;padding:8px;margin-bottom:12px;" onkeydown="if(event.key==='Enter') login()">
 
-            <p id="error" style="color:red;text-align:center;margin-top:10px;"></p>
-        </div>
+        <button onclick="login()">Enter ❤️</button>
+        <p id="error" style="color:red;"></p>
     </div>
-    <!-- LANDING PAGE -->
-    <div class="page" id="page1">
-        <div class="paper">
-            <h1>WEBSITE CONTAINING MY LOVE 💖</h1>
-            <p>Choose what you want to see, bebbiiii 💕</p>
-
-            <button onclick="goToPage(2)">Letter 💌</button>
-            <button onclick="goToPage(3)">Pictures 📸</button>
-            <button onclick="goToPage(4)">Video 🎥</button>
-            <button onclick="goToPage(5)">Edits 🎥</button>
-            <button onclick="goToPage(6)">Secret 🎥</button>
-        </div>
-    </div>
-
-    <!-- PAGE 2 : LETTER -->
-    <div class="page" id="page2">
-        <div class="paper">
-            <h1>My Bebbiiii,</h1>
-
-            <p>
-
-                <br><br> Hi!!! ako diay ni imong uyabbb!! HAHHAHA 💕 Kahinumdom paka ani na picture? Mao ni atong first meet 😭 HAPPY KAAYO KO ANI KAYY CUTE KAAYO KAA SAYANG LANG KAY WALA TA NAGKA TAPAD PERO HAPPY KO KAY NAGKITA TAAA!!
-
-            </p>
-
-            <p>
-                Gihimo ni nako ni para naa kay tan-awon everytime mingawon ka nako 💖
-            </p>
-
-
-
-            <p>Love kaayo tika bebiiii ❤️ Happy 1 year and 3 months</p>
-
-            <p>
-                Bebbiiiiii, First of alll thank kaayo sa tanannn. Thank you kay ni stay ka sa akoa even tho medjo layo layo ta sa usa't usa, wala jud nag bag-o imong chinattan nako, wala ka nag bag-o jdddd. You Stayed consistent sa akoa and im very THANKFULLLLL!!!!
-            </p>
-            <p>
-                I hope na kung mabasa nani nimooo, ma sud sa huna2 nimo na LOVEEE NAA LOVEEE ka nakoooo!!! IKAW AKONG PINAKA LOVE SA TANANNN
-            </p>
-            <p>
-                Thank you for being you, and for loving me bebbiiiii.
-
-
-                <div class="signature">Your Bebi, Francis ❤️</div>
-
-                <button onclick="goToPage(1)">Back 🏠</button>
-        </div>
-    </div>
-
-    <!-- PAGE 3 : PICTURES -->
-    <div class="page" id="page3">
-        <div class="paper">
-            <h1>Us 📸</h1>
-            <p>Pics nato bebiiii, I miss you 🥺</p>
-
-            <div class="photos">
-                <img src="3.jpg" class="inline" />
-                <img src="2.jpg" class="inline" />
-                <img src="4.jpg" />
-                <img src="5.jpg" />
-                <img src="1.jpg">
-                <img src="6.jpg">
-                <img src="7.jpg">
-                <img src="8.jpg">
-                <img src="9.jpg">
-                <img src="11.jpg">
-                <img src="12.jpg">
-                <img src="13.jpg">
-
-            </div>
-
-            <button onclick="goToPage(1)">Back 🏠</button>
-        </div>
-    </div>
-
-    <!-- PAGE 4 : VIDEO -->
-    <div class="page" id="page4">
-        <div class="paper">
-            <h1>To the one I cherish the most 💖</h1>
-
-
-            <video src="lovelove.mp4" width="320" controls> </video>
-
-            <video src="cream1.mp4" width="320" controls> </video>
-            <video src="cream2.mp4" width="320" controls> </video>
-
-
-
-            <div class="signature">Pransis ❤️</div>
-
-
-
-
-
-            <button onclick="goToPage(1)">Back 🏠</button>
-        </div>
-    </div>
-
-
-    <div class="page" id="page5">
-        <div class="paper">
-
-            <video src="love.mp4" width="320" controls> </video>
-            <P>FIRST ICE CREAM DATE NATOOO!!! 2ND ANOE HAHHAHAHHAHAHA</P>
-
-
-            <button onclick="goToPage(1)">Back 🏠</button>
-        </div>
-
-    </div>
-
-    <div class="page" id="page6">
-        <div class="paper">
-
-            <video src="secret6.mp4" width="200" controls> </video>
-            <div class="photos">
-                <img src="secret1.jpg">
-                <img src="secret2.jpg">
-                <img src="secret3.jpg">
-                <img src="secret4.jpg">
-                <img src="secret5.jpg">
-
-            </div>
-
-
-            <button onclick="goToPage(1)">Back 🏠</button>
-        </div>
-
-    </div>
-
 
     <script src="auth.js"></script>
-
     <script>
         function login() {
             const input = document.getElementById("password").value;
             const error = document.getElementById("error");
 
             if (checkPassword(input)) {
-                document.getElementById("loginPage").classList.remove("active");
-                document.getElementById("page1").classList.add("active");
-                error.textContent = "";
-                localStorage.setItem("loggedIn", "yes");
+                window.location.href = "main.html"; // ✅ GO TO MAIN SITE
             } else {
                 error.textContent = "Wrong password 🥺";
+                document.getElementById("password").value = "";
             }
         }
-
-
-        function goToPage(page) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(`page${page}`).classList.add('active');
-            window.scrollTo(0, 0);
-        }
     </script>
-
-
-
 
 </body>
 
