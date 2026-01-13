@@ -314,16 +314,6 @@
             }
         }
 
-        if (localStorage.getItem("loggedIn") === "yes") {
-            const loginPage = document.getElementById("loginPage");
-            const page1 = document.getElementById("page1");
-
-            if (loginPage && page1) {
-                loginPage.classList.remove("active");
-                page1.classList.add("active");
-            }
-        }
-
 
         function goToPage(page) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
