@@ -14,7 +14,6 @@
       overflow-y: auto;
     }
 
-    /* Floating hearts */
     .heart {
       position: fixed;
       color: #ff6f9f;
@@ -29,7 +28,6 @@
       to { transform: translateY(-10vh); }
     }
 
-    /* Pages */
     .page {
       position: absolute;
       inset: 0;
@@ -49,7 +47,6 @@
       pointer-events: auto;
     }
 
-    /* Paper */
     .paper {
       background: #fffaf3;
       width: 360px;
@@ -111,17 +108,11 @@
       object-fit: cover;
       border-radius: 6px;
       box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-      animation: fadeIn 1.5s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
     }
 
     button {
       display: block;
-      margin: 20px auto 0;
+      margin: 15px auto 0;
       background: #ff8fb1;
       border: none;
       color: white;
@@ -142,6 +133,12 @@
       font-style: italic;
       margin-top: 20px;
     }
+
+    video {
+      display: block;
+      margin: 10px auto;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -152,8 +149,20 @@
   <div class="heart" style="left:50%; animation-delay:2s">💖</div>
   <div class="heart" style="left:80%; animation-delay:4s">💕</div>
 
-  <!-- PAGE 1 -->
+  <!-- LANDING PAGE -->
   <div class="page active" id="page1">
+    <div class="paper">
+      <h1>WEBSITE CONTAINING MY LOVE 💖</h1>
+      <p>Choose what you want to see, bebbiiii 💕</p>
+
+      <button onclick="goToPage(2)">Letter 💌</button>
+      <button onclick="goToPage(3)">Pictures 📸</button>
+      <button onclick="goToPage(4)">Video 🎥</button>
+    </div>
+  </div>
+
+  <!-- PAGE 2 : LETTER -->
+  <div class="page" id="page2">
     <div class="paper">
       <h1>My Bebbiiii,</h1>
 
@@ -162,40 +171,36 @@
         <img src="2.jpg" class="inline" />
         <br><br>
         Hi!!! ako diay ni imong uyabbb!! HAHHAHA 💕  
-        <br><br>
-        Kahinumdom paka ani na pictureee? Mao ni atong first meet 😭  
-        HAPPY KAAYO KO ANI KAYY CUTE KAAYO KAA SAYANG LANG KAY WALA TA NAGKA TAPAD PERO HAPPY KO KAY NAGKITA TAAA!!
-        
-      </p>
+        Kahinumdom paka ani na picture? Mao ni atong first meet 😭
+	HAPPY KAAYO KO ANI KAYY CUTE KAAYO KAA SAYANG LANG KAY WALA TA NAGKA TAPAD PERO HAPPY KO KAY NAGKITA TAAA!!
+      
+</p>
 
       <p>
-        Gihimo ni nako ni para naa kay tan awn everytime mingawon ka nako, e press ra ni na link everytime mingawon ka nako okayyy!! 💖
-        
+        Gihimo ni nako ni para naa kay tan-awon everytime mingawon ka nako 💖
       </p>
 
       <p>
         <img src="4.jpg" class="inline" />
         <img src="5.jpg" class="inline" />
         <br><br>
-        Ani nga time kay birthday nako 🎂  
-        Happy kaayo ko kay nakakita na sad ko nimooo.
+        Birthday nako ani 🎂 Happy kaayo ko kay nakakita ko nimooooo.
       </p>
 
-      <p>
-        Love kaayo tika bebiiii.  
-        Happy 1 year & 2 months nato ❤️
-      </p>
+      <p>Love kaayo tika bebiiii ❤️
+	Happy 1 year and 3 months</p>
 
       <div class="signature">Your Bebi, Francis ❤️</div>
-      <button onclick="nextPage()">Next 💌</button>
+
+      <button onclick="goToPage(1)">Back 🏠</button>
     </div>
   </div>
 
-  <!-- PAGE 2 -->
-  <div class="page" id="page2">
+  <!-- PAGE 3 : PICTURES -->
+  <div class="page" id="page3">
     <div class="paper">
       <h1>Us 📸</h1>
-      <p>Pics nato bebiiii, I miss youuu 🥺</p>
+      <p>Pics nato bebiiii, I miss you 🥺</p>
 
       <div class="photos">
         <img src="1.jpg">
@@ -208,14 +213,21 @@
         <img src="13.jpg">
       </div>
 
-      <button onclick="nextPage()">One more ❤️</button>
+      <button onclick="goToPage(1)">Back 🏠</button>
     </div>
   </div>
 
-  <!-- PAGE 3 -->
-  <div class="page" id="page3">
+  <!-- PAGE 4 : VIDEO -->
+  <div class="page" id="page4">
     <div class="paper">
-      <h1>To the one i cherish the most!!!!!</h1>
+      <h1>To the one I cherish the most 💖</h1>
+
+
+      <video src="lovelove.mp4" width="320" controls > </video>
+      <video src="love.mp4" width="320" controls > </video>
+      <video src="cream1.mp4" width="320" controls > </video>
+      <video src="cream2.mp4" width="320" controls > </video>
+
       <p>
         Bebbiiiiii, First of alll thank kaayo sa tanannn. Thank you kay ni stay ka sa akoa even tho medjo layo layo ta sa usa't usa, wala jud nag bag-o imong chinattan nako, wala ka nag bag-o jdddd. You Stayed consistent sa akoa and im very THANKFULLLLL!!!!
       </p>
@@ -224,17 +236,17 @@
       </p>
       <p>
         Thank you for being you, and for loving me bebbiiiii.
-      </p>
+
       <div class="signature">Pransis ❤️</div>
+
+      <button onclick="goToPage(1)">Back 🏠</button>
     </div>
   </div>
 
   <script>
-    let current = 1;
-    function nextPage() {
-      document.getElementById(`page${current}`).classList.remove('active');
-      current++;
-      document.getElementById(`page${current}`).classList.add('active');
+    function goToPage(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(`page${page}`).classList.add('active');
       window.scrollTo(0, 0);
     }
   </script>
